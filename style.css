@@ -2,7 +2,7 @@
 
 * {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 html, body{
@@ -13,8 +13,8 @@ html, body{
 }
 
 .container{
-    width: 1000px;
-    margin: 20px;
+    width: 625px;
+    margin: 40px;
     padding: 10px;
     background-color: #ECCCB2;
     border-radius: 20px;
@@ -24,12 +24,12 @@ html, body{
 .display{
     margin: 20px;
     border: #FFBCBC 20px ridge;
-    width: 770px;
-    height: 200px;
+    width: 515px;
+    height: 150px;
     border-radius: 25px;
     text-align: left;
     font-style: italic;
-    font-size: 40px;
+    font-size: 20px;
     padding: 10px;
 }
 
@@ -43,13 +43,13 @@ html, body{
 .digit{
     flex-direction: row-reverse;
     align-items: flex-start;
-    height: 616px;
-    width: 462px;
+    height: 415px;
+    width: 310px;
 }
 
 .operator, .misc{
     flex-direction: row;
-    width: 305px;
+    width: 205px;
 }
 .misc{
     align-self: flex-end;
@@ -71,16 +71,12 @@ html, body{
 
 .operator > .operator, .misc > *, .digit > *{
     display: inline;
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     margin: 0;
 }
-
 .digit.zero{
-    display: inline;
-    margin: 0;
-    width: 305px;
-    height: 150px;
+    flex-grow: 1;
 }
 
 .digit:last-child{
