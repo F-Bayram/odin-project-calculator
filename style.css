@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&display=swap');
+
+* {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 60px;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #FFEBC1;
+}
+
+.container{
+    width: 1000px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #ECCCB2;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+.display{
+    margin: 20px;
+    border: #FFBCBC 20px ridge;
+    width: 770px;
+    height: 200px;
+    border-radius: 25px;
+    text-align: left;
+    font-style: italic;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.digit, .operator, .misc{
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 20px;
+}
+
+.digit{
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    height: 616px;
+    width: 462px;
+}
+
+.operator, .misc{
+    flex-direction: row;
+    width: 305px;
+}
+.misc{
+    align-self: flex-end;
+    margin: 0;
+}
+.equals{
+    flex-grow: 1;
+}
+
+.misc > *{
+    background-color: #AC7088;
+}
+.operator > .operator{
+    background-color: #DEB6AB;
+}
+.digit > *, .equals{
+    background-color: #F5E8C7;
+}
+
+.operator > .operator, .misc > *, .digit > *{
+    display: inline;
+    height: 150px;
+    width: 150px;
+    margin: 0;
+}
+
+.digit.zero{
+    display: inline;
+    margin: 0;
+    width: 305px;
+    height: 150px;
+}
+
+.digit:last-child{
+    order: 1;
+}
+
+.digit:nth-last-child(2){
+    order: 2;
+}
+
+.digit > button:hover{
+    background-color: #F6DFEB;
+}
+.operator > button:hover{
+    background-color: #F6E7D8;
+}
+.misc > button:hover{
+    background-color: #C65D7B;
+}
+button:hover.equals{
+    background-color: #A1CAE2;
+}
