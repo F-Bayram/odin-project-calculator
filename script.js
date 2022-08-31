@@ -1,3 +1,8 @@
+const DISPLAY = document.querySelector(".display");
+const BUTTON_LIST = document.querySelectorAll("button");
+
+console.dir(BUTTON_LIST)
+
 function add(a, b){
     return a+b;
 }
@@ -29,3 +34,14 @@ function operate(operator, a, b){
 
     return res;
 }
+
+function writeToDisplay(e){
+    const BUTTON = e.target;
+    const CONTENT = BUTTON.getAttribute("data-content");
+    DISPLAY.textContent += CONTENT;
+}
+
+BUTTON_LIST.forEach(btn => {
+    btn.setAttribute("data-content", btn.textContent);
+    btn.addEventListener("click", writeToDisplay);
+});
