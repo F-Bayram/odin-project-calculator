@@ -2,35 +2,56 @@
 
 * {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 html, body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: #FFEBC1;
+    background-color: #5D534A;
 }
 
 .container{
-    width: 625px;
-    margin: 40px;
+    height: 450px;
+    width: 355px;
     padding: 10px;
-    background-color: #ECCCB2;
+    background-color: #D6D2C4;
     border-radius: 20px;
-    margin: 20px auto;
+    border: #4A3933 15px solid;
+    margin: 40px auto;
 }
 
 .display{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     margin: 20px;
-    border: #FFBCBC 20px ridge;
-    width: 515px;
-    height: 150px;
+    border: #E6E6E6 15px outset;
+    width: 265px;
+    height: 100px;
     border-radius: 25px;
-    text-align: left;
     font-style: italic;
-    font-size: 20px;
+    font-size: 25px;
+    color: #4A3933;
     padding: 10px;
+}
+
+.expression, .result{
+    display: inline;
+    line-height: normal;
+    margin: 0;
+}
+
+.result{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
 }
 
 .digit, .operator, .misc{
@@ -43,13 +64,13 @@ html, body{
 .digit{
     flex-direction: row-reverse;
     align-items: flex-start;
-    height: 415px;
-    width: 310px;
+    height: 215px;
+    width: 160px;
 }
 
 .operator, .misc{
     flex-direction: row;
-    width: 205px;
+    width: 105px;
 }
 .misc{
     align-self: flex-end;
@@ -60,20 +81,21 @@ html, body{
 }
 
 .misc > *{
-    background-color: #AC7088;
+    background-color: #C26565;
 }
 .operator > .operator{
-    background-color: #DEB6AB;
+    background-color: #F5E8C7;
 }
 .digit > *, .equals{
-    background-color: #F5E8C7;
+    background-color: #EAC8AF;
 }
 
 .operator > .operator, .misc > *, .digit > *{
     display: inline;
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     margin: 0;
+    border-radius: 20px;
 }
 .digit.zero{
     flex-grow: 1;
@@ -88,14 +110,20 @@ html, body{
 }
 
 .digit > button:hover{
-    background-color: #F6DFEB;
+    background-color: #DDDDDD;
 }
 .operator > button:hover{
     background-color: #F6E7D8;
 }
 .misc > button:hover{
-    background-color: #C65D7B;
+    background-color: #B7657B;
 }
 button:hover.equals{
     background-color: #A1CAE2;
+}
+
+.comma:disabled{
+    border: black 2px solid;
+    background-color: #F9C49A;
+    cursor: not-allowed;
 }
